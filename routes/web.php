@@ -17,8 +17,9 @@ Route::get('/', function () {
     return inertia('welcome');
 });
 Route::get('/users', function () {
-    sleep(3);
-    return inertia('users');
+    return inertia('users',[
+        'time' => now()->toTimeString(),
+    ]);
 });
 Route::get('/settings', function () {
     return inertia('settings');

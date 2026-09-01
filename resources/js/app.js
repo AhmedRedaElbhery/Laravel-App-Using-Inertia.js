@@ -1,6 +1,8 @@
 import { createApp, h } from 'vue'
 import { createInertiaApp } from '@inertiajs/vue3'
 import { InertiaProgress } from '@inertiajs/progress'
+import {Link} from '@inertiajs/vue3'
+import {Head} from '@inertiajs/vue3'
 
 createInertiaApp({
     resolve: name => {
@@ -14,8 +16,13 @@ createInertiaApp({
             render: () => h(App, props),
         })
             .use(plugin)
+            .component("Link",Link)
+            .component("Head",Head)
             .mount(el)
+
     },
+
+    title: title => 'My App - ' + title
 })
 
 InertiaProgress.init()

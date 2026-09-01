@@ -1,17 +1,28 @@
 <template>
-    <h1>Users</h1>
 
-    <Nav />
+<Head> <title>Users</title></Head>
 
+  <Layout>
+    <h4>Users</h4>
+
+    <div style="margin-top: 800px">
+      <p>The Current time is {{ time }}</p>
+
+      <Link href="/users" preserve-scroll>refresh</Link>
+    </div>
+
+  </Layout>
 </template>
 
 
 <script>
+import Layout from "../shared/layout.vue";
 
-import Nav from '../shared/nav.vue';
+export default {
+  components: { Layout },
 
-export default{
-    components: {Nav},
-}
-
+  props: {
+    time: String,
+  },
+};
 </script>

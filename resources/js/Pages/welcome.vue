@@ -1,17 +1,27 @@
 <template>
 
-    <h1>Home</h1>
-    <Nav></Nav>
+<Head>
+    <title>Home</title>
+</Head>
+
+    <!-- <Layout :username="username">
+        <h4>Home</h4>
+    </Layout> -->
+    <h4>Home</h4>
 
 </template>
 
 
 <script>
 
-import Nav from '../shared/nav.vue';
+import Layout from '../shared/layout.vue';
+import { Head } from '@inertiajs/vue3';
 
 export default{
-    components: {Nav},
+    // components: {Layout},
+    components: {Head},
+    layout : Layout,
+    props: {username: String}
 }
 
 </script>

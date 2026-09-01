@@ -1,17 +1,21 @@
 <template>
-    <h1>Settings</h1>
 
-    <Nav></Nav>
+<Head> <title>Settings</title></Head>
+
+  <Layout>
+    <h4>Settings</h4>
+  </Layout>
+
 
 </template>
 
 
 <script>
 
-import Nav from '../shared/nav.vue';
+import Layout from '../shared/layout.vue';
 
 export default{
-    components: {Nav},
+    components: {Layout},
 }
 
 </script>

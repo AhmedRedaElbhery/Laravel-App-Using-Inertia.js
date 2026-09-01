@@ -1,22 +1,29 @@
 <template>
-
-    <nav>
-        <ul>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/users">users</Link></li>
-            <li><Link href="/settings">Settings</Link></li>
-            <li><Link href="/logout" method="post" as="button">Log Out</Link></li>
-        </ul>
-    </nav>
+  <nav class="mt-2">
+    <ul class="d-flex list-unstyled">
+      <li style=" margin-right: 20px;">
+        <navLink class="text-dark" href="/" :active="$page.component == 'welcome'">Home</navLink>
+      </li>
+      <li style=" margin-right: 20px;">
+        <navLink class="text-dark" href="/users" :active="$page.component == 'users'"
+          >Users</navLink
+        >
+      </li>
+      <li style=" margin-right: 20px;">
+        <NavLink class="text-dark" href="/settings" :active="$page.component == 'settings'"
+          >settings</NavLink
+        >
+      </li>
+    </ul>
+  </nav>
 </template>
 
 
 <script>
 
-import { Link } from '@inertiajs/vue3';
+import NavLink from './NavLink.vue';
 
-export default{
-    components: {Link},
-}
-
+export default {
+  components: { NavLink },
+};
 </script>

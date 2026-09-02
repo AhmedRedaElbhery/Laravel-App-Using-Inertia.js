@@ -5,7 +5,7 @@
         <navLink class="text-dark" href="/" :active="$page.component == 'welcome'">Home</navLink>
       </li>
       <li style=" margin-right: 20px;">
-        <navLink class="text-dark" href="/users" :active="$page.component == 'users'"
+        <navLink class="text-dark" href="/users/" :active="$page.component == 'users/index'"
           >Users</navLink
         >
       </li>
